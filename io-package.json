@@ -1,0 +1,100 @@
+{
+	"common": {
+		"name": "omron-fins",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Omron-fins",
+		"titleLang": {
+			"en": "Omron-fins",
+			"de": "Omron-Flossen",
+			"ru": "Омрон-плавники",
+			"pt": "Omron-barbatanas",
+			"nl": "Omron-vinnen",
+			"fr": "Omron-ailerons",
+			"it": "Omron-pinne",
+			"es": "Aletas Omron",
+			"pl": "Płetwy Omron",
+			"zh-cn": "欧姆龙鳍"
+		},
+		"desc": {
+			"en": "Anbindung für Omron SPS mittels FINS Protokoll",
+			"de": "Anbindung für Omron SPS mittels FINS Protokoll",
+			"ru": "Защитные перчатки Omron SPS FINS Protokoll",
+			"pt": "Anbindung für Omron SPS mittels FINS Protokoll",
+			"nl": "Anbindung für Omron SPS wanten FINS Protokoll",
+			"fr": "Anbindung für Omron SPS moufles FINS Protokoll",
+			"it": "Anbindung für Omron SPS mittels FINS Protokoll",
+			"es": "Anbindung für Omron SPS mittels ALETAS Protokoll",
+			"pl": "Anbindung für Omron Rękawice jednopalcowe SPS FINS Protokoll",
+			"zh-cn": "AnbindungfürOmron SPS手套FINS Protokoll"
+		},
+		"authors": [
+			"thebam <elektrobam@gmx.de>"
+		],
+		"keywords": [
+			"SPS",
+			"FINS",
+			"Omron"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "omron-fins.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/thebam1990/ioBroker.omron-fins/master/admin/omron-fins.png",
+		"readme": "https://github.com/thebam1990/ioBroker.omron-fins/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "protocols",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
