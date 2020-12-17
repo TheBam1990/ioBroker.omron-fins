@@ -1,93 +1,236 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <!-- Materialze style -->
+    <link rel="stylesheet" type="text/css" href="../../css/adapter.css" />
+    <link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="../../lib/css/themes/jquery-ui/default/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" href="../../lib/css/fancytree/ui.fancytree.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../lib/css/iob/selectID.css" />
 
-	<!-- Load ioBroker scripts and styles-->
-	<link rel="stylesheet" type="text/css" href="../../css/adapter.css" />
-	<link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+    <script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../lib/js/jquery-ui-1.10.3.full.min.js"></script>
+    <script type="text/javascript" src="../../lib/js/jquery.fancytree-all.min.js"></script>
+    <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
 
-	<script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="../../js/translate.js"></script>
+    <script type="text/javascript" src="../../lib/js/selectID.js"></script>
+    <script type="text/javascript" src="../../lib/js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/adapter-settings.js"></script>
+    <script type="text/javascript" src="words.js"></script>
 
-	<script type="text/javascript" src="../../js/translate.js"></script>
-	<script type="text/javascript" src="../../lib/js/materialize.js"></script>
-	<script type="text/javascript" src="../../js/adapter-settings.js"></script>
 
-	<!-- Load our own files -->
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script type="text/javascript" src="words.js"></script>
 
-	<script type="text/javascript">
-		// This will be called by the admin adapter when the settings page loads
-		function load(settings, onChange) {
-			// example: select elements with id=key and class=value and insert value
-			if (!settings) return;
-			$('.value').each(function () {
-				var $key = $(this);
-				var id = $key.attr('id');
-				if ($key.attr('type') === 'checkbox') {
-					// do not call onChange direct, because onChange could expect some arguments
-					$key.prop('checked', settings[id])
-						.on('change', () => onChange())
-						;
-				} else {
-					// do not call onChange direct, because onChange could expect some arguments
-					$key.val(settings[id])
-						.on('change', () => onChange())
-						.on('keyup', () => onChange())
-						;
-				}
-			});
-			onChange(false);
-			// reinitialize all the Materialize labels on the page if you are dynamically adding inputs:
-			if (M) M.updateTextFields();
-		}
+    <style>
+        .s7_tab {
+            /*overflow: hidden;*/
+            position: relative;
+            height: calc(100% - 20px);
+            width: 100%;
+        }
 
-		// This will be called by the admin adapter when the user presses the save button
-		function save(callback) {
-			// example: select elements with class=value and build settings object
-			var obj = {};
-			$('.value').each(function () {
-				var $this = $(this);
-				if ($this.attr('type') === 'checkbox') {
-					obj[$this.attr('id')] = $this.prop('checked');
-				} else {
-					obj[$this.attr('id')] = $this.val();
-				}
-			});
-			callback(obj);
-		}
-	</script>
+        .buntes {
+            /*overflow: hidden;*/
+            color: rgb(0, 0, 0) !important;
 
+
+        }
+
+        .back_image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            color: rgb(0, 10, 153);
+            font-weight: bolder;
+            font-size: 39px;
+            padding: 9px;
+            font-family: sans-serif;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var devices = [];
+        function ip2number(addr) {
+            var parts = addr.split('.').map(function (str) { return parseInt(str); });
+
+            return (parts[0] ? parts[0] << 24 : 0) + (parts[1] ? parts[1] << 16 : 0) + (parts[2] ? parts[2] << 8 : 0) + parts[3];
+        }
+
+
+        function compareIpOrName(name1, name2) {
+            if (name1.match(/^\d+\.\d+\.\d+\.\d+$/) && name2.match(/^\d+\.\d+\.\d+\.\d+$/)) {
+                name1 = ip2number(name1);
+                name2 = ip2number(name2);
+            }
+
+            if (name1 < name2) {
+                return -1;
+            } else
+                if (name1 > name2) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+        }
+
+        // the function loadSettings has to exist ...
+        function load(settings, onChange) {
+            if (!settings) {
+                return;
+            }
+
+            if (settings.noHostname === undefined) {
+                settings.noHostname = false;
+            }
+
+            devices = settings.devices || [];
+
+            // js: Sort by IP
+            /*devices.sort(function (dev1, dev2) {
+                return compareIpOrName(dev1.ip, dev2.ip)
+            });*/
+
+            for (var i = 0; i < devices.length; i++) {
+                if (devices[i].enabled === undefined) {
+                    devices[i].enabled = true;
+                }
+            }
+
+            $('.value').each(function () {
+                var $key = $(this);
+                var id = $key.attr('id');
+                // check which type of html element
+                if ($key.attr('type') === 'checkbox') {
+                    $key.prop('checked', settings[id])  // read setting value from adapter config object and set checkbox in config page
+                        .on('change', () => onChange()) // set listener to checkbox and call onChange if the value has changed
+                        ;
+                } else {
+                    $key.val(settings[id])
+                        .on('change', () => onChange())
+                        .on('keyup', () => onChange())
+                        ;
+                }
+            });
+
+            onChange(false);
+            values2table('devices', devices, onChange);
+            if (M) M.updateTextFields();
+        }
+
+        function save(callback) {
+            var obj = {};
+            $('.value').each(function () {
+                var $this = $(this);
+                if ($this.attr('type') === 'checkbox') {
+                    obj[$this.attr('id')] = $this.prop('checked');
+                } else {
+                    obj[$this.attr('id')] = $this.val();
+                }
+            });
+            // Get edited table
+            obj.devices = table2values('devices');
+            //obj.tab = table2values('tab-main');
+
+            callback(obj);
+        }
+    </script>
+    <style>
+        .m .select-wrapper+label {
+            top: 100%;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="m adapter-container">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s2"><a href="#tab-main" class="translate active">Main settings</a></li>
+                    <li class="tab col s2"><a href="#tab-devices" class="translate">Devices</a></li>
+                </ul>
 
-	<div class="m adapter-container">
+                <div id="tab-main" class="col s12 page">
+                    <div class=row>
+                        <div class="col s12 m4 l2">
+                            <img src="omron-fins.png" class="logo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <label class="translate buntes" for="plc_ip">PLC IP Address: </label>
+                            <input class="s7_params value" id="plc_ip" placeholder="192.168." />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <label class="translate buntes" for="plc_port">Anschlussnummer:</label>
+                            <input class="s7_params value" id="plc_port" placeholder="9600" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <label class="translate buntes" for="plc_poll">Poll Intervall(ms):</label>
+                            <input class="s7_params value" id="plc_poll" placeholder="1000" />
+                        </div>
+                    </div>
+                </div>
 
-		<div class="row">
-			<div class="col s12 m4 l2">
-				<img src="omron-fins.png" class="logo">
-			</div>
-		</div>
-
-		<!-- Put your content here -->
-
-		<!-- For example columns with settings: -->
-		<div class="row">
-			<div class="col s6 input-field">
-				<input type="checkbox" class="value" id="option1" />
-				<label for="option1" class="translate">option1</label>
-			</div>
-
-			<div class="col s6 input-field">
-				<input type="text" class="value" id="option2" />
-				<label for="option2" class="translate">option2</label>
-			</div>
-		</div>
-
-	</div>
-
+                <div id="tab-devices" class="col s12 page">
+                    <div class="col s12" id="devices">
+                        <!--<div class="row">
+                            <div class="col s1">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span class="translate">CSV</span>
+                                        <input type="file" id="knxprojFile">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                </div>
+                                <div class="progress" id="progress">
+                                    <div class="determinate" style="width: 170%"></div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <a class="btn-floating waves-effect waves-light blue table-button-add"><i
+                                class="material-icons">add</i></a>
+                        <div class="table-values-div">
+                            <table class="table-values">
+                                <thead>
+                                    <tr>
+                                        <th data-name="_index" style="width: 40px" class="translate"></th>
+                                        <th data-name="name" class="translate">Name</th>
+                                        <th data-name="value" class="translate" style="width: 120px; white-space: nowrap">
+                                            Bereich/Variable</th>
+                                        <th data-name="type" style="width: 10%" data-type="select"
+                                            data-options="BOOL;CHANNEL;NUMBER;TIMER;COUNTER;" class="translate">type
+                                        </th>
+                                        <th data-name="Bits" data-type="checkbox"
+                                            style="width: 80px; white-space: nowrap" class="translate">Bit´s
+                                            einfügen</th>
+                                        <th data-buttons="delete" style="width: 120px"></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>

@@ -16,10 +16,10 @@
 				"zh-cn": "首次出版"
 			}
 		},
-		"title": "Omron-fins",
+		"title": "Omron-Fins",
 		"titleLang": {
-			"en": "Omron-fins",
-			"de": "Omron-Flossen",
+			"en": "Omron-ins",
+			"de": "Omron-FINS",
 			"ru": "Омрон-плавники",
 			"pt": "Omron-barbatanas",
 			"nl": "Omron-vinnen",
@@ -52,7 +52,7 @@
 		"license": "MIT",
 		"platform": "Javascript/Node.js",
 		"main": "main.js",
-		"icon": "omron-fins.png",
+		"icon": "admin/omron-fins.png",
 		"enabled": true,
 		"extIcon": "https://raw.githubusercontent.com/thebam1990/ioBroker.omron-fins/master/admin/omron-fins.png",
 		"readme": "https://github.com/thebam1990/ioBroker.omron-fins/blob/master/README.md",
@@ -70,9 +70,15 @@
 		]
 	},
 	"native": {
-		"option1": true,
-		"option2": "42"
+		"tab-main":{
+			"plc_ip":"192.168.",
+			"plc_port":"9600",
+			"plc_poll":"5000"
+		},
+		"devices":{}
+		
 	},
+
 	"objects": [],
 	"instanceObjects": [
 		{

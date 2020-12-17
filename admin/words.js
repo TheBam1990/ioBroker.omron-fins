@@ -14,28 +14,38 @@ systemDictionary = {
 		"pl": "Ustawienia adaptera dla omron-fins",
 		"zh-cn": "omron-fins的适配器设置"
 	},
-	"option1": {
-		"en": "option1",
-		"de": "Option 1",
-		"ru": "Опция 1",
-		"pt": "Opção 1",
-		"nl": "Optie 1",
-		"fr": "Option 1",
-		"it": "opzione 1",
-		"es": "Opción 1",
-		"pl": "opcja 1",
-		"zh-cn": "选项1"
+	"PLC IP Address:": {
+		"en": "PLC IP Address:", 
+		"de": "SPS IP Adresse:",     
+		"ru": "PLC IP адрес:",       
+		"pt": "Endereço IP do PLC:", 
+		"nl": "PLC IP-adres:",       
+		"fr": "Adresse IP de l'API:",
+		"it": "Indirizzo IP del PLC:",  
+		"es": "PLC IP Address:",        
+		"pl": "Adres IP sterownika PLC:"
 	},
-	"option2": {
-		"en": "option2",
-		"de": "Option 2",
-		"ru": "option2",
-		"pt": "opção 2",
-		"nl": "Optie 2",
-		"fr": "Option 2",
-		"it": "opzione 2",
-		"es": "opcion 2",
-		"pl": "Opcja 2",
-		"zh-cn": "选项2"
+	"Anschlussnummer:": {
+		"en": "Port number:", 
+		"de": "Anschlussnummer:",     
+		"ru": "Homep nopta:",       
+		"pt": "Endereço IP do PLC:", 
+		"nl": "PLC IP-adres:",       
+		"fr": "Numéro de port:",
+		"it": "Numero di porta:",  
+		"es": "Número de puerto:",        
+		"pl": "Numer portu:"
+	},
+	"Poll Intervall(ms):": {
+		"en": "Poll Intervall(ms):", 
+		"de": "Poll Intervall(ms):",     
+		"ru": "????",       
+		"pt": "????", 
+		"nl": "????",       
+		"fr": "???",
+		"it": "??:",  
+		"es": "???:",        
+		"pl": "???:"
 	}
+	
 };

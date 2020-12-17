@@ -1,25 +1,40 @@
 {
-  "name": "iobroker.omron-fins",
-  "version": "0.0.1",
-  "description": "Anbindung für Omron SPS mittels FINS Protokoll",
+  "_from": "file:/tmp/iobroker.omron-fins-0.0.1.tgz",
+  "_id": "iobroker.omron-fins@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-1lgh8J0CYbdsU3ZTt31fNctO9USPU28087bygBdE2PMkn6FIfT5ZPfMxypvKZa6c1TP+ZYKNM+mbusjyAPZaiQ==",
+  "_location": "/iobroker.omron-fins",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "file",
+    "where": "/opt/iobroker",
+    "raw": "/tmp/iobroker.omron-fins-0.0.1.tgz",
+    "rawSpec": "/tmp/iobroker.omron-fins-0.0.1.tgz",
+    "saveSpec": "file:/tmp/iobroker.omron-fins-0.0.1.tgz",
+    "fetchSpec": "/tmp/iobroker.omron-fins-0.0.1.tgz"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "/tmp/iobroker.omron-fins-0.0.1.tgz",
+  "_shasum": "cf67f2f30eb9409684778b6b14b68ad39f08a2e6",
+  "_spec": "/tmp/iobroker.omron-fins-0.0.1.tgz",
+  "_where": "/opt/iobroker",
   "author": {
     "name": "thebam",
     "email": "elektrobam@gmx.de"
   },
-  "homepage": "https://github.com/thebam1990/ioBroker.omron-fins",
-  "license": "MIT",
-  "keywords": [
-    "SPS",
-    "FINS",
-    "Omron"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thebam1990/ioBroker.omron-fins"
+  "bugs": {
+    "url": "https://github.com/thebam1990/ioBroker.omron-fins/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
-    "@iobroker/adapter-core": "^2.4.0"
+    "@iobroker/adapter-core": "^2.4.0",
+    "omron-fins": "git+https://github.com/ptrks/node-omron-fins.git"
   },
+  "deprecated": false,
+  "description": "Anbindung für Omron SPS mittels FINS Protokoll",
   "devDependencies": {
     "@iobroker/testing": "^2.3.0",
     "@types/chai": "^4.2.12",
@@ -40,17 +55,26 @@
     "sinon": "^9.1.0",
     "sinon-chai": "^3.5.0"
   },
+  "homepage": "https://github.com/thebam1990/ioBroker.omron-fins",
+  "keywords": [
+    "SPS",
+    "FINS",
+    "Omron"
+  ],
+  "license": "MIT",
   "main": "main.js",
+  "name": "iobroker.omron-fins",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebam1990/ioBroker.omron-fins.git"
+  },
   "scripts": {
+    "lint": "eslint",
+    "test": "npm run test:js && npm run test:package",
+    "test:integration": "mocha test/integration --exit",
     "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
     "test:package": "mocha test/package --exit",
-    "test:unit": "mocha test/unit --exit",
-    "test:integration": "mocha test/integration --exit",
-    "test": "npm run test:js && npm run test:package",
-    "lint": "eslint"
+    "test:unit": "mocha test/unit --exit"
   },
-  "bugs": {
-    "url": "https://github.com/thebam1990/ioBroker.omron-fins/issues"
-  },
-  "readmeFilename": "README.md"
+  "version": "0.0.1"
 }
