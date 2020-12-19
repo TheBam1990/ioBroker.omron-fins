@@ -9,15 +9,16 @@
 const utils = require("@iobroker/adapter-core");
 const fins = require("omron-fins/lib/index.js");
 
-const thisval=[];
-const thisName=[];
-const all=[];
+const thisval = [];
+const thisName = [];
+const all = [];
 let time;
 let time2;
 let plc_poll;
 let plc_ip;
 let plc_port;
-let client ;
+let client;
+let devicesin;
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -52,21 +53,27 @@ class OmronFins extends utils.Adapter {
 		// this.config:
 		//this.log.debug("Value1: " + JSON.stringify(this.config.devices[0].value));
 		//this.log.debug("config.devices: " + JSON.stringify(this.config.devices));
-		plc_poll=this.config.plc_poll;			//werte von index als Daten übergeben
-		plc_ip=this.config.plc_ip;
-		plc_port=Number(this.config.plc_port);
-		client = new fins.FinsClient(plc_port,plc_ip);
-		for  (const device in this.config.devices){				//for schleife für Array Bilden der werte
-			try {
-				thisval.push(this.config.devices[device].value);
-				thisName.push(this.config.devices[device].name);
-				all.push(
-					this.stateValues = {
-						name: nameFilter(this.config.devices[device].name),
-						variable: this.config.devices[device].value}
-				);
+		if (this.config.devices != "") {
+			devicesin=true;
+			plc_poll = this.config.plc_poll;			//werte von index als Daten übergeben
+			plc_ip = this.config.plc_ip;
+			plc_port = Number(this.config.plc_port);
+			client = new fins.FinsClient(plc_port, plc_ip);
+			for (const device in this.config.devices) {				//for schleife für Array Bilden der werte
+				try {
+					thisval.push(this.config.devices[device].value);
+					thisName.push(this.config.devices[device].name);
+					all.push(
+						this.stateValues = {
+							name: nameFilter(this.config.devices[device].name),
+							variable: this.config.devices[device].value
+						}
+					);
 
-			}	catch (error){this.log.info("Error Arry ");}
+				} catch (error) { this.log.info("Error Arry "); }
+			}
+		} else {
+			devicesin=false;
 		}
 
 
@@ -175,9 +182,9 @@ class OmronFins extends utils.Adapter {
 
 		//result = await this.checkGroupAsync("admin", "admin");
 		//this.log.info("check group user admin group admin: " + result);
-
+		if (devicesin == true) {
 		this.readStates();
-
+		}
 	}
 
 	readStates() {		//Abrufen der der Werte von der Steuerung mit Zeit interval
@@ -187,7 +194,7 @@ class OmronFins extends utils.Adapter {
 		//this.log.debug("port: " + JSON.stringify(plc_port));
 		//this.log.debug("IP: " + JSON.stringify(plc_ip));
 
-		client.on("reply",function(msg) {
+		client.on("reply", function (msg) {
 			//console.log("Reply from: ", msg.remotehost);
 			//_this.log.debug("Replying to issued command of: "+ msg.command);
 			//_this.log.debug("Response code of: "  + msg.code);
@@ -201,7 +208,7 @@ class OmronFins extends utils.Adapter {
 			}
 			_this.setStateAsync("info.connection", true);
 			clearTimeout(time);
-			time=setTimeout(()=> {
+			time = setTimeout(() => {
 				_this.setStateAsync("info.connection", false);
 			}, Number(plc_poll) + 4000);
 		});
@@ -256,18 +263,18 @@ class OmronFins extends utils.Adapter {
 	 */
 
 
-	onStateChange(id, state ) {
+	onStateChange(id, state) {
 		if (state && state.ack === false) {
 			let aktuell;
 			// The state was changed and is not (yet) acknowledged
 			this.log.debug(`state ${id} changed: ${state.val}  (ack = ${state.ack})`);
 			//ALL: [{"name":"Test","variable":"CB0:00"},{"name":"Test2","variable":"CB0:01"},{"name":"test3","variable":"W31:00"},{"name":"Testd","variable":"D12"}]
-			const idarry=id.split(".");
-			aktuell=all.find(x=>x.name===idarry[idarry.length-1]).variable;
+			const idarry = id.split(".");
+			aktuell = all.find(x => x.name === idarry[idarry.length - 1]).variable;
 			//this.log.debug(`idarry ${idarry} `);
 			//this.log.debug(`Variable ${aktuell} `);
 			//this.log.debug(`Wert ${state.val} `);
-			client.write(aktuell,Number(state.val));
+			client.write(aktuell, Number(state.val));
 
 		} else {
 			//this.log.info(`state ${id} deleted`);
