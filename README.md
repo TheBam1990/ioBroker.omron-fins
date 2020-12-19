@@ -44,6 +44,7 @@ Im Reiter type den variablen Typ auswählen so wie er auch in der SPS hinterlegt
 
 ### 0.0.1
 * (Thebam) initial release
+Erste version zum Abholen und schreiben der variablen
 
 ## License
 MIT License
