@@ -13,11 +13,30 @@
 **Tests:** ![Test and Release](https://github.com/thebam1990/ioBroker.omron-fins/workflows/Test%20and%20Release/badge.svg)
 
 ## omron-fins adapter for ioBroker
+Anbindung für Omron SPS mittels FINS Protokoll alle CJ2M oder auch CJ1M Modelle
 
-Anbindung für Omron SPS mittels FINS Protokoll
+## User manual (english)
+Adjust the IP address of the PLC in the main settings tab.
+The port is the standard port and generally does not need to be adjusted.
+The poll value is specified in ms and indicates the cyclical query of the values.
+ 
+The variables to be picked up are entered in the Devices tab
+Simply add a new one with the + and then assign a freely selectable name. Please name each variable individually and not immediately.
+In the Variable area, enter the variable to be fetched for input or output variables CB0: 00, CB0: 01 CB100: 00 etc. Always use colons to separate them. W31: 00 etc. also works for flags. D1 values ​​etc. can also be fetched.
+In the type tab, select the variable type as it is stored in the PLC.
+ 
+ 
 
-## Developer manual
-This section is intended for the developer. It can be deleted later
+## Benutzer anleitung (deutsch)
+
+Im Tab Haupteinstellungen die IP Adresse der SPS anpassen. 
+Der Port ist der standardt Port und brauch in der regel nicht angepasst werden. 
+Der Poll wert ist in ms angegeben und besagt die zykliche abfrage der werte.
+
+Im Tab Devices werden die abzuholenden Variablen eingetragen 
+Mit dem + einfach eine neue hinzufügen und dann einen Frei wählbaren Namen vergeben Bitte jede Variable individell bennen und nicht gleich.
+Im Bereich Variable die abzuholende Variable eintragen für Input oder Output Variablen CB0:00, CB0:01 CB100:00 usw. Hierbei zur Trennung immer Doppelpunkte verwenden. Für Merker funktioniert auch W31:00 usw. Ebenfalls können D1 werte usw. abgeholt werden. 
+Im Reiter type den variablen Typ auswählen so wie er auch in der SPS hinterlegt ist.
 
 
 
