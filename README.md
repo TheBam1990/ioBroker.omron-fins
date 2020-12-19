@@ -24,7 +24,7 @@ This section is intended for the developer. It can be deleted later
 ## Changelog
 
 ### 0.0.1
-* (thebam) initial release
+* (Thebam) initial release
 
 ## License
 MIT License
