@@ -47,5 +47,5 @@ systemDictionary = {
 		"es": "Intervalo de voĉdonado (ms):",
 		"pl": "Okres odpytywania (ms):"
 	}
-	
+
 };
