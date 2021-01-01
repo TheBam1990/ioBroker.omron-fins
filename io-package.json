@@ -100,7 +100,7 @@
         "license": "MIT",
         "platform": "Javascript/Node.js",
         "main": "main.js",
-        "icon": "admin/omron-fins.png",
+        "icon": "omron-fins.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.omron-fins/master/admin/omron-fins.png",
         "readme": "https://github.com/TheBam1990/ioBroker.omron-fins/blob/master/README.md",
