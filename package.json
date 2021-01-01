@@ -67,7 +67,7 @@
   "name": "iobroker.omron-fins",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thebam1990/ioBroker.omron-fins"
+    "url": "https://github.com/TheBam1990/ioBroker.omron-fins"
   },
   "scripts": {
     "test:js": "mocha \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
