@@ -1,20 +1,8 @@
 {
     "common": {
         "name": "omron-fins",
-        "version": "0.0.2-0",
+        "version": "0.0.1-0",
         "news": {
-            "0.0.2-0": {
-                "en": "add GitHub Action",
-                "de": "GitHub Action hinzufügen",
-                "ru": "добавить действие GitHub",
-                "pt": "adicionar ação GitHub",
-                "nl": "voeg GitHub-actie toe",
-                "fr": "ajouter une action GitHub",
-                "it": "aggiungi GitHub Action",
-                "es": "agregar acción de GitHub",
-                "pl": "dodaj akcję GitHub",
-                "zh-cn": "添加GitHub动作"
-            },
             "0.0.1": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",

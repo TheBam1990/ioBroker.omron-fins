@@ -70,13 +70,13 @@
     "url": "git+https://github.com/thebam1990/ioBroker.omron-fins.git"
   },
   "scripts": {
-    "lint": "eslint",
-    "test": "npm run test:js && npm run test:package",
-    "test:integration": "mocha test/integration --exit",
-    "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
+    "test:js": "mocha \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
     "test:package": "mocha test/package --exit",
     "test:unit": "mocha test/unit --exit",
-    "release": "release-script"
+    "test:integration": "mocha test/integration --exit",
+    "test": "npm run test:js && npm run test:package",
+    "release": "release-script",
+    "lint": "eslint"
   },
-  "version": "0.0.2-0"
+  "version": "0.0.1-0"
 }
