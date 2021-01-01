@@ -46,6 +46,9 @@ Im Reiter type den variablen Typ auswählen so wie er auch in der SPS hinterlegt
  ### __WORK IN PROGRESS__ ( - falls nicht benötigt löschen sonst klammern entfernen und nach dem - dein text schreiben )
 -->
 
+### __WORK IN PROGRESS__
+* (Thebam) adater checker anpassung
+
 ### 0.0.1-2 (2021-01-01)
 * (Thebam) native objekt ip geändert
 
@@ -60,7 +63,7 @@ Erste version zum Abholen und schreiben der variablen
 ## License
 MIT License
 
-Copyright (c) 2020 thebam <elektrobam@gmx.de>
+Copyright (c) 2021 thebam 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
