@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "omron-fins",
-        "version": "0.0.1-1",
+        "version": "0.0.1-2",
         "news": {
+            "0.0.1-2": {
+                "en": "native objekt ip geändert",
+                "de": "native objekt ip gehört",
+                "ru": "родной объект ip geändert",
+                "pt": "objekt ip geändert nativo",
+                "nl": "native objekt ip geändert",
+                "fr": "objekt natif ip geändert",
+                "it": "native objekt ip geändert",
+                "es": "nativa objekt ip geändert",
+                "pl": "natywny objekt ip geändert",
+                "zh-cn": "本地对象"
+            },
             "0.0.1-1": {
                 "en": "add GitHub Action",
                 "de": "GitHub Action hinzufügen",
