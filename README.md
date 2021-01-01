@@ -41,6 +41,12 @@ Im Reiter type den variablen Typ auswählen so wie er auch in der SPS hinterlegt
 
 
 ## Changelog
+<!--
+ Placeholder for the next version (at the beginning of the line):
+ ### __WORK IN PROGRESS__ ( - falls nicht benötigt löschen sonst klammern entfernen und nach dem - dein text schreiben )
+-->
+### __WORK IN PROGRESS__ 
+* (Thebam) add GitHub Action
 
 ### 0.0.1
 * (Thebam) initial release
