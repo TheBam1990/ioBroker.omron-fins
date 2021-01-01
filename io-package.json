@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "omron-fins",
-        "version": "0.0.1-4",
+        "version": "0.0.1-5",
         "news": {
+            "0.0.1-5": {
+                "en": "io-package angepasst",
+                "de": "io-package unterscheidet",
+                "ru": "io-пакет angepasst",
+                "pt": "pacote io angepasst",
+                "nl": "io-pakket angepasst",
+                "fr": "io-package angepasst",
+                "it": "io-package angepasst",
+                "es": "io-paquete angepasst",
+                "pl": "angepasst",
+                "zh-cn": "io-package angepasst"
+            },
             "0.0.1-4": {
                 "en": "package json angepasst",
                 "de": "Paket json unterscheidet",
