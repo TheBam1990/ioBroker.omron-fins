@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "omron-fins",
-        "version": "0.0.1-3",
+        "version": "0.0.1-4",
         "news": {
+            "0.0.1-4": {
+                "en": "package json angepasst",
+                "de": "Paket json unterscheidet",
+                "ru": "пакет json angepasst",
+                "pt": "pacote json angepasst",
+                "nl": "pakket json angepasst",
+                "fr": "package json angepasst",
+                "it": "pacchetto json angepasst",
+                "es": "paquete json angepasst",
+                "pl": "pakiet json angepasst",
+                "zh-cn": "包json angepasst"
+            },
             "0.0.1-3": {
                 "en": "adater checker anpassung",
                 "de": "adater checker anstellung",
