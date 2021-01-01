@@ -46,7 +46,7 @@ Im Reiter type den variablen Typ auswählen so wie er auch in der SPS hinterlegt
  ### __WORK IN PROGRESS__ ( - falls nicht benötigt löschen sonst klammern entfernen und nach dem - dein text schreiben )
 -->
 
-### __WORK IN PROGRESS__
+### 0.0.1-3 (2021-01-01)
 * (Thebam) adater checker anpassung
 
 ### 0.0.1-2 (2021-01-01)
