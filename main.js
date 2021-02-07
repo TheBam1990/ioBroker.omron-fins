@@ -53,7 +53,7 @@ class OmronFins extends utils.Adapter {
 		// this.config:
 		//this.log.debug("Value1: " + JSON.stringify(this.config.devices[0].value));
 		//this.log.debug("config.devices: " + JSON.stringify(this.config.devices));
-		if (this.config.devices != "") {
+		if (this.config.devices !== "") {
 			devicesin=true;
 			plc_poll = this.config.plc_poll;			//werte von index als Daten übergeben
 			plc_ip = this.config.plc_ip;
@@ -126,6 +126,8 @@ class OmronFins extends utils.Adapter {
 				// code block
 			}
 			//objekte Bilden
+
+			// @ts-ignore
 			await this.setObjectNotExistsAsync(nameFilter(this.config.devices[datapoint].name), {
 				type: "state",
 				common: {
@@ -143,17 +145,6 @@ class OmronFins extends utils.Adapter {
 			this.subscribeStates(nameFilter(this.config.devices[datapoint].name));
 		}
 
-		await this.setObjectNotExistsAsync("info.connection", {
-			type: "state",
-			common: {
-				name: "info.connection",
-				type: "boolean",
-				role: "indicator",
-				read: true,
-				write: true,
-			},
-			native: {},
-		});
 
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
 		//this.subscribeStates("testVariable");
@@ -182,7 +173,7 @@ class OmronFins extends utils.Adapter {
 
 		//result = await this.checkGroupAsync("admin", "admin");
 		//this.log.info("check group user admin group admin: " + result);
-		if (devicesin == true) {
+		if (devicesin === true) {
 		this.readStates();
 		}
 	}
@@ -215,7 +206,7 @@ class OmronFins extends utils.Adapter {
 
 		client.readMultiple(...thisval);
 		//this.log.info("Time  wert: " + time);
-		time2 = setTimeout(async function () {
+		time2 = setTimeout( function () {
 			_this.readStates();			//Am ende der funktion erneut aufrufen
 		}, plc_poll);
 	}
