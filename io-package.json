@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "omron-fins",
-        "version": "0.0.1-5",
+        "version": "0.0.1-6",
         "news": {
+            "0.0.1-6": {
+                "en": "Änderungen für Repro eingetragen",
+                "de": "Bedenken für Reprotreten",
+                "ru": "Änderungen für Repro eingetragen",
+                "pt": "Änderungen für Repro eingetragen",
+                "nl": "Änderungen für Repro eingetragen",
+                "fr": "Änderungen für Repro eingetragen",
+                "it": "Änderungen für Repro eingetragen",
+                "es": "Änderungen für Repro eingetragen",
+                "pl": "Ęnderungen für Repro eingetragen",
+                "zh-cn": "再生之本"
+            },
             "0.0.1-5": {
                 "en": "io-package angepasst",
                 "de": "io-package unterscheidet",

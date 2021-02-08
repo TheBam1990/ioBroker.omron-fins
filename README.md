@@ -37,6 +37,9 @@ In the type tab, select the variable type as it is stored in the PLC.
  ### __WORK IN PROGRESS__ ( - falls nicht benötigt löschen sonst klammern entfernen und nach dem - dein text schreiben )
 -->
 ### __WORK IN PROGRESS__
+* (Thebam) NPM Aktualisiert
+
+### 0.0.1-6 (2021-02-07)
 * (Thebam) Änderungen für Repro eingetragen
 
 ### 0.0.1-5 (2021-01-01)
