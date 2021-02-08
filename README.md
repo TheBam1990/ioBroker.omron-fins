@@ -36,7 +36,7 @@ In the type tab, select the variable type as it is stored in the PLC.
  Placeholder for the next version (at the beginning of the line):
  ### __WORK IN PROGRESS__ ( - falls nicht benötigt löschen sonst klammern entfernen und nach dem - dein text schreiben )
 -->
-### __WORK IN PROGRESS__
+### 0.0.1-7 (2021-02-08)
 * (Thebam) NPM Aktualisiert
 
 ### 0.0.1-6 (2021-02-07)
