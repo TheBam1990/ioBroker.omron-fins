@@ -185,7 +185,7 @@ class OmronFins extends utils.Adapter {
 		//this.log.debug("port: " + JSON.stringify(plc_port));
 		//this.log.debug("IP: " + JSON.stringify(plc_ip));
 
-		client.on("reply", function (msg) {
+		client.once("reply", function (msg) {
 			//console.log("Reply from: ", msg.remotehost);
 			//_this.log.debug("Replying to issued command of: "+ msg.command);
 			//_this.log.debug("Response code of: "  + msg.code);
