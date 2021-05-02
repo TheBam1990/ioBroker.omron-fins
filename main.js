@@ -47,7 +47,7 @@ class OmronFins extends utils.Adapter {
 		// Initialize your adapter here
 
 		// Reset the connection indicator during startup
-		this.setState("info.connection", false, true);
+		this.setState("info.connection", { val: true, ack: true });
 
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
@@ -197,10 +197,10 @@ class OmronFins extends utils.Adapter {
 				//_this.setStateAsync(nameFilter(thisName[x]), { val: Boolean(msg.values[x]), ack: true });
 				_this.setStateAsync(nameFilter(thisName[x]), { val: msg.values[x], ack: true });
 			}
-			_this.setStateAsync("info.connection", true);
+			_this.setStateAsync("info.connection", { val: true, ack: true });
 			clearTimeout(time);
 			time = setTimeout(() => {
-				_this.setStateAsync("info.connection", false);
+				_this.setStateAsync("info.connection", { val: false, ack: true });
 			}, Number(plc_poll) + 4000);
 		});
 
