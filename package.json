@@ -18,7 +18,7 @@
     "url": "https://github.com/TheBam1990/ioBroker.omron-fins"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^2.4.0",
+    "@iobroker/adapter-core": "^2.5.1",
     "omron-fins": "git+https://github.com/ptrks/node-omron-fins.git"
   },
   "devDependencies": {
