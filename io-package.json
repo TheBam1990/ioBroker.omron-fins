@@ -141,6 +141,7 @@
         "extIcon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.omron-fins/master/admin/omron-fins.png",
         "readme": "https://github.com/TheBam1990/ioBroker.omron-fins/blob/master/README.md",
         "loglevel": "info",
+        "tier": 2,
         "mode": "daemon",
         "type": "hardware",
         "compact": true,
