@@ -37,6 +37,9 @@ In the type tab, select the variable type as it is stored in the PLC.
  Placeholder for the next version (at the beginning of the line):
  ### __WORK IN PROGRESS__ ( - falls nicht benötigt löschen sonst klammern entfernen und nach dem - dein text schreiben )
 -->
+### **WORK IN PROGRESS**
+update dependencies
+
 ### 0.0.2 (2021-03-05)
 * (Thebam) Änderungen im Abrufen Verbesserung des Intervall
 
