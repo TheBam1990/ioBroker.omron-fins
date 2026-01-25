@@ -9,6 +9,7 @@
   "homepage": "https://github.com/thebam1990/ioBroker.omron-fins",
   "license": "MIT",
   "keywords": [
+    "ioBroker",
     "SPS",
     "FINS",
     "Omron"
