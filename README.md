@@ -68,6 +68,8 @@ In the type tab, select the variable type as it is stored in the PLC.
 * (Thebam) initial release
 Erste version zum Abholen und schreiben der variablen
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 MIT License
 
