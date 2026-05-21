@@ -1,187 +1,187 @@
 {
-    "common": {
-        "name": "omron-fins",
-        "version": "0.0.2",
-        "news": {
-            "0.0.1-7": {
-                "en": "NPM Aktualisiert",
-                "de": "NPM aktualisiert",
-                "ru": "NPM Aktualisiert",
-                "pt": "NPM Aktualisiert",
-                "nl": "NPM Aktualisiert",
-                "fr": "NPM Aktualisiert",
-                "it": "NPM Aktualisiert",
-                "es": "NPM Aktualisiert",
-                "pl": "NPM Aktualisiert",
-                "zh-cn": "NPM Aktualisiert"
-            },
-            "0.0.1-6": {
-                "en": "Änderungen für Repro eingetragen",
-                "de": "Bedenken für Reprotreten",
-                "ru": "Änderungen für Repro eingetragen",
-                "pt": "Änderungen für Repro eingetragen",
-                "nl": "Änderungen für Repro eingetragen",
-                "fr": "Änderungen für Repro eingetragen",
-                "it": "Änderungen für Repro eingetragen",
-                "es": "Änderungen für Repro eingetragen",
-                "pl": "Ęnderungen für Repro eingetragen",
-                "zh-cn": "再生之本"
-            },
-            "0.0.1-5": {
-                "en": "io-package angepasst",
-                "de": "io-package unterscheidet",
-                "ru": "io-пакет angepasst",
-                "pt": "pacote io angepasst",
-                "nl": "io-pakket angepasst",
-                "fr": "io-package angepasst",
-                "it": "io-package angepasst",
-                "es": "io-paquete angepasst",
-                "pl": "angepasst",
-                "zh-cn": "io-package angepasst"
-            },
-            "0.0.1-4": {
-                "en": "package json angepasst",
-                "de": "Paket json unterscheidet",
-                "ru": "пакет json angepasst",
-                "pt": "pacote json angepasst",
-                "nl": "pakket json angepasst",
-                "fr": "package json angepasst",
-                "it": "pacchetto json angepasst",
-                "es": "paquete json angepasst",
-                "pl": "pakiet json angepasst",
-                "zh-cn": "包json angepasst"
-            },
-            "0.0.1-3": {
-                "en": "adater checker anpassung",
-                "de": "adater checker anstellung",
-                "ru": "Adater Checker Anpassung",
-                "pt": "adater checker anpassung",
-                "nl": "adater checker anpassung",
-                "fr": "adater checker anpassung",
-                "it": "adater checker anpassung",
-                "es": "verificador adater anpassung",
-                "pl": "adater checker anpassung",
-                "zh-cn": "跳棋检查"
-            },
-            "0.0.1-2": {
-                "en": "native objekt ip geändert",
-                "de": "native objekt ip gehört",
-                "ru": "родной объект ip geändert",
-                "pt": "objekt ip geändert nativo",
-                "nl": "native objekt ip geändert",
-                "fr": "objekt natif ip geändert",
-                "it": "native objekt ip geändert",
-                "es": "nativa objekt ip geändert",
-                "pl": "natywny objekt ip geändert",
-                "zh-cn": "本地对象"
-            },
-            "0.0.1-1": {
-                "en": "add GitHub Action",
-                "de": "GitHub Action hinzufügen",
-                "ru": "добавить действие GitHub",
-                "pt": "adicionar ação GitHub",
-                "nl": "voeg GitHub-actie toe",
-                "fr": "ajouter une action GitHub",
-                "it": "aggiungi GitHub Action",
-                "es": "agregar acción de GitHub",
-                "pl": "dodaj akcję GitHub",
-                "zh-cn": "添加GitHub动作"
-            },
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            }
-        },
-        "titleLang": {
-            "en": "Omron-ins",
-            "de": "Omron-FINS",
-            "ru": "Омрон-плавники",
-            "pt": "Omron-barbatanas",
-            "nl": "Omron-vinnen",
-            "fr": "Omron-ailerons",
-            "it": "Omron-pinne",
-            "es": "Aletas Omron",
-            "pl": "Płetwy Omron",
-            "zh-cn": "欧姆龙鳍"
-        },
-        "desc": {
-            "en": "Anbindung für Omron SPS mittels FINS Protokoll",
-            "de": "Anbindung für Omron SPS mittels FINS Protokoll",
-            "ru": "Защитные перчатки Omron SPS FINS Protokoll",
-            "pt": "Anbindung für Omron SPS mittels FINS Protokoll",
-            "nl": "Anbindung für Omron SPS wanten FINS Protokoll",
-            "fr": "Anbindung für Omron SPS moufles FINS Protokoll",
-            "it": "Anbindung für Omron SPS mittels FINS Protokoll",
-            "es": "Anbindung für Omron SPS mittels ALETAS Protokoll",
-            "pl": "Anbindung für Omron Rękawice jednopalcowe SPS FINS Protokoll",
-            "zh-cn": "AnbindungfürOmron SPS手套FINS Protokoll"
-        },
-        "authors": [
-            "thebam <elektrobam@gmx.de>"
-        ],
-        "keywords": [
-            "SPS",
-            "FINS",
-            "Omron"
-        ],
-        "licenseInformation": {
-            "type": "free",
-            "license": "MIT"
-        },
-        "platform": "Javascript/Node.js",
-        "icon": "omron-fins.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.omron-fins/master/admin/omron-fins.png",
-        "readme": "https://github.com/TheBam1990/ioBroker.omron-fins/blob/master/README.md",
-        "loglevel": "info",
-        "mode": "daemon",
-        "type": "hardware",
-        "compact": true,
-        "connectionType": "local",
-        "dataSource": "poll",
-        "materialize": true,
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ]
+  "common": {
+    "name": "omron-fins",
+    "version": "0.0.2",
+    "news": {
+      "0.0.1-7": {
+        "en": "NPM Aktualisiert",
+        "de": "NPM aktualisiert",
+        "ru": "NPM Aktualisiert",
+        "pt": "NPM Aktualisiert",
+        "nl": "NPM Aktualisiert",
+        "fr": "NPM Aktualisiert",
+        "it": "NPM Aktualisiert",
+        "es": "NPM Aktualisiert",
+        "pl": "NPM Aktualisiert",
+        "zh-cn": "NPM Aktualisiert"
+      },
+      "0.0.1-6": {
+        "en": "Änderungen für Repro eingetragen",
+        "de": "Bedenken für Reprotreten",
+        "ru": "Änderungen für Repro eingetragen",
+        "pt": "Änderungen für Repro eingetragen",
+        "nl": "Änderungen für Repro eingetragen",
+        "fr": "Änderungen für Repro eingetragen",
+        "it": "Änderungen für Repro eingetragen",
+        "es": "Änderungen für Repro eingetragen",
+        "pl": "Ęnderungen für Repro eingetragen",
+        "zh-cn": "再生之本"
+      },
+      "0.0.1-5": {
+        "en": "io-package angepasst",
+        "de": "io-package unterscheidet",
+        "ru": "io-пакет angepasst",
+        "pt": "pacote io angepasst",
+        "nl": "io-pakket angepasst",
+        "fr": "io-package angepasst",
+        "it": "io-package angepasst",
+        "es": "io-paquete angepasst",
+        "pl": "angepasst",
+        "zh-cn": "io-package angepasst"
+      },
+      "0.0.1-4": {
+        "en": "package json angepasst",
+        "de": "Paket json unterscheidet",
+        "ru": "пакет json angepasst",
+        "pt": "pacote json angepasst",
+        "nl": "pakket json angepasst",
+        "fr": "package json angepasst",
+        "it": "pacchetto json angepasst",
+        "es": "paquete json angepasst",
+        "pl": "pakiet json angepasst",
+        "zh-cn": "包json angepasst"
+      },
+      "0.0.1-3": {
+        "en": "adater checker anpassung",
+        "de": "adater checker anstellung",
+        "ru": "Adater Checker Anpassung",
+        "pt": "adater checker anpassung",
+        "nl": "adater checker anpassung",
+        "fr": "adater checker anpassung",
+        "it": "adater checker anpassung",
+        "es": "verificador adater anpassung",
+        "pl": "adater checker anpassung",
+        "zh-cn": "跳棋检查"
+      },
+      "0.0.1-2": {
+        "en": "native objekt ip geändert",
+        "de": "native objekt ip gehört",
+        "ru": "родной объект ip geändert",
+        "pt": "objekt ip geändert nativo",
+        "nl": "native objekt ip geändert",
+        "fr": "objekt natif ip geändert",
+        "it": "native objekt ip geändert",
+        "es": "nativa objekt ip geändert",
+        "pl": "natywny objekt ip geändert",
+        "zh-cn": "本地对象"
+      },
+      "0.0.1-1": {
+        "en": "add GitHub Action",
+        "de": "GitHub Action hinzufügen",
+        "ru": "добавить действие GitHub",
+        "pt": "adicionar ação GitHub",
+        "nl": "voeg GitHub-actie toe",
+        "fr": "ajouter une action GitHub",
+        "it": "aggiungi GitHub Action",
+        "es": "agregar acción de GitHub",
+        "pl": "dodaj akcję GitHub",
+        "zh-cn": "添加GitHub动作"
+      },
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      }
     },
-    "native": {
-        "plc_ip": "",
-        "plc_port": "9600",
-        "plc_poll": "5000",
-        "devices": []
+    "titleLang": {
+      "en": "Omron-ins",
+      "de": "Omron-FINS",
+      "ru": "Омрон-плавники",
+      "pt": "Omron-barbatanas",
+      "nl": "Omron-vinnen",
+      "fr": "Omron-ailerons",
+      "it": "Omron-pinne",
+      "es": "Aletas Omron",
+      "pl": "Płetwy Omron",
+      "zh-cn": "欧姆龙鳍"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Device or service connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "Anbindung für Omron SPS mittels FINS Protokoll",
+      "de": "Anbindung für Omron SPS mittels FINS Protokoll",
+      "ru": "Защитные перчатки Omron SPS FINS Protokoll",
+      "pt": "Anbindung für Omron SPS mittels FINS Protokoll",
+      "nl": "Anbindung für Omron SPS wanten FINS Protokoll",
+      "fr": "Anbindung für Omron SPS moufles FINS Protokoll",
+      "it": "Anbindung für Omron SPS mittels FINS Protokoll",
+      "es": "Anbindung für Omron SPS mittels ALETAS Protokoll",
+      "pl": "Anbindung für Omron Rękawice jednopalcowe SPS FINS Protokoll",
+      "zh-cn": "AnbindungfürOmron SPS手套FINS Protokoll"
+    },
+    "authors": [
+      "thebam <elektrobam@gmx.de>"
+    ],
+    "keywords": [
+      "SPS",
+      "FINS",
+      "Omron"
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "omron-fins.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.omron-fins/master/admin/omron-fins.png",
+    "readme": "https://github.com/TheBam1990/ioBroker.omron-fins/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "hardware",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "materialize": true,
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
     ]
+  },
+  "native": {
+    "plc_ip": "",
+    "plc_port": "9600",
+    "plc_poll": "5000",
+    "devices": []
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
