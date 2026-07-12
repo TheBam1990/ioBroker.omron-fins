@@ -43,6 +43,8 @@ Export the symbol table from CX-Programmer as CSV or tab-separated text and past
 
 - Improved cyclic polling
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 Copyright (c) 2021-2026 TheBam <elektrobam@gmx.de>
