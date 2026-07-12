@@ -21,15 +21,23 @@
         { "type": "checkbox", "attr": "write", "title": { "en": "Writable", "de": "Schreibbar" }, "default": true }
       ],
       "xs": 12
+      ,"sm": 12,
+      "md": 12,
+      "lg": 12,
+      "xl": 12
     },
     "symbolTable": {
       "type": "text",
       "label": { "en": "CX-Programmer symbol table (CSV/TSV)", "de": "CX-Programmer-Symboltabelle (CSV/TSV)" },
       "help": { "en": "Export the symbol table in CX-Programmer and paste its CSV/TSV content here. Name, address and data type columns are detected automatically; manual entries override imported symbols with the same name.", "de": "Symboltabelle in CX-Programmer exportieren und den CSV-/TSV-Inhalt hier einfügen. Name, Adresse und Datentyp werden automatisch erkannt; manuelle Einträge überschreiben importierte Symbole gleichen Namens." },
-      "multiLine": true,
-      "rows": 10,
+      "minRows": 6,
+      "maxRows": 12,
       "newLine": true,
-      "xs": 12
+      "xs": 12,
+      "sm": 12,
+      "md": 12,
+      "lg": 12,
+      "xl": 12
     }
   }
 }

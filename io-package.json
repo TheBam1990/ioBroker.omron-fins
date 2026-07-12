@@ -27,7 +27,7 @@
       "en": "Connect Omron PLCs to ioBroker using the FINS protocol", "de": "Omron-SPS über das FINS-Protokoll mit ioBroker verbinden", "ru": "Подключение ПЛК Omron к ioBroker по протоколу FINS", "pt": "Ligar PLCs Omron ao ioBroker através do protocolo FINS", "nl": "Omron-PLC's via FINS met ioBroker verbinden", "fr": "Connecter les automates Omron à ioBroker via FINS", "it": "Collega PLC Omron a ioBroker tramite FINS", "es": "Conecta PLC Omron a ioBroker mediante FINS", "pl": "Połącz sterowniki Omron z ioBroker przez FINS", "uk": "Підключення ПЛК Omron до ioBroker через FINS", "zh-cn": "通过 FINS 协议将 Omron PLC 连接到 ioBroker"
     },
     "authors": ["TheBam <elektrobam@gmx.de>"],
-    "keywords": ["ioBroker", "PLC", "FINS", "Omron"],
+    "keywords": ["PLC", "FINS", "Omron"],
     "licenseInformation": { "type": "free", "license": "MIT" },
     "platform": "Javascript/Node.js",
     "icon": "omron-fins.png",
@@ -61,6 +61,6 @@
     { "_id": "info", "type": "channel", "common": { "name": "Information" }, "native": {} },
     { "_id": "info.connection", "type": "state", "common": { "role": "indicator.connected", "name": "PLC connected", "type": "boolean", "read": true, "write": false, "def": false }, "native": {} },
     { "_id": "info.lastError", "type": "state", "common": { "role": "text", "name": "Last error", "type": "string", "read": true, "write": false, "def": "" }, "native": {} },
-    { "_id": "info.lastUpdate", "type": "state", "common": { "role": "value.time", "name": "Last successful update", "type": "string", "read": true, "write": false, "def": "" }, "native": {} }
+    { "_id": "info.lastUpdate", "type": "state", "common": { "role": "value.time", "name": "Last successful update", "type": "number", "read": true, "write": false, "def": 0 }, "native": {} }
   ]
 }
