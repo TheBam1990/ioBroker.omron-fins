@@ -1,24 +1,24 @@
 {
   "type": "panel",
-  "i18n": false,
+  "i18n": true,
   "items": {
-    "connectionHeader": { "type": "header", "text": { "en": "PLC connection", "de": "SPS-Verbindung" }, "size": 2, "xs": 12 },
-    "plc_ip": { "type": "ip", "label": { "en": "PLC IP address", "de": "SPS-IP-Adresse" }, "onlyIp4": true, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
-    "plc_port": { "type": "number", "label": { "en": "FINS port", "de": "FINS-Port" }, "min": 1, "max": 65535, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
-    "protocol": { "type": "select", "label": { "en": "Protocol", "de": "Protokoll" }, "options": [{ "label": "UDP", "value": "udp" }, { "label": "TCP", "value": "tcp" }], "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
-    "plc_poll": { "type": "number", "label": { "en": "Polling interval (ms)", "de": "Abfrageintervall (ms)" }, "min": 250, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
-    "timeout": { "type": "number", "label": { "en": "Request timeout (ms)", "de": "Anfrage-Timeout (ms)" }, "min": 1000, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
-    "destinationNode": { "type": "number", "label": { "en": "Destination node (DA1, 0 = automatic)", "de": "Zielknoten (DA1, 0 = automatisch)" }, "min": 0, "max": 254, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
-    "sourceNode": { "type": "number", "label": { "en": "Source node (SA1, 0 = automatic)", "de": "Quellknoten (SA1, 0 = automatisch)" }, "min": 0, "max": 254, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
-    "variablesHeader": { "type": "header", "text": { "en": "PLC variables", "de": "SPS-Variablen" }, "size": 2, "newLine": true, "xs": 12 },
+    "connectionHeader": { "type": "header", "text": "PLC connection", "size": 2, "xs": 12 },
+    "plc_ip": { "type": "ip", "label": "PLC IP address", "onlyIp4": true, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
+    "plc_port": { "type": "number", "label": "FINS port", "min": 1, "max": 65535, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
+    "protocol": { "type": "select", "label": "Protocol", "options": [{ "label": "UDP", "value": "udp" }, { "label": "TCP", "value": "tcp" }], "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
+    "plc_poll": { "type": "number", "label": "Polling interval (ms)", "min": 250, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
+    "timeout": { "type": "number", "label": "Request timeout (ms)", "min": 1000, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
+    "destinationNode": { "type": "number", "label": "Destination node (DA1, 0 = automatic)", "min": 0, "max": 254, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
+    "sourceNode": { "type": "number", "label": "Source node (SA1, 0 = automatic)", "min": 0, "max": 254, "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3 },
+    "variablesHeader": { "type": "header", "text": "PLC variables", "size": 2, "newLine": true, "xs": 12 },
     "devices": {
       "type": "table",
-      "label": { "en": "Manually configured variables", "de": "Manuell konfigurierte Variablen" },
+      "label": "Manually configured variables",
       "items": [
-        { "type": "text", "attr": "name", "title": { "en": "Name", "de": "Name" }, "width": "30%" },
-        { "type": "text", "attr": "value", "title": { "en": "FINS address", "de": "FINS-Adresse" }, "width": "25%" },
-        { "type": "select", "attr": "type", "title": { "en": "Data type", "de": "Datentyp" }, "options": [{ "label": "BOOL", "value": "BOOL" }, { "label": "NUMBER", "value": "NUMBER" }, { "label": "TIMER", "value": "TIMER" }, { "label": "COUNTER", "value": "COUNTER" }] },
-        { "type": "checkbox", "attr": "write", "title": { "en": "Writable", "de": "Schreibbar" }, "default": true }
+        { "type": "text", "attr": "name", "title": "Name", "width": "30%" },
+        { "type": "text", "attr": "value", "title": "FINS address", "width": "25%" },
+        { "type": "select", "attr": "type", "title": "Data type", "options": [{ "label": "BOOL", "value": "BOOL" }, { "label": "NUMBER", "value": "NUMBER" }, { "label": "TIMER", "value": "TIMER" }, { "label": "COUNTER", "value": "COUNTER" }] },
+        { "type": "checkbox", "attr": "write", "title": "Writable", "default": true }
       ],
       "xs": 12
       ,"sm": 12,
@@ -28,8 +28,8 @@
     },
     "symbolTable": {
       "type": "text",
-      "label": { "en": "CX-Programmer symbol table (CSV/TSV)", "de": "CX-Programmer-Symboltabelle (CSV/TSV)" },
-      "help": { "en": "Export the symbol table in CX-Programmer and paste its CSV/TSV content here. Name, address and data type columns are detected automatically; manual entries override imported symbols with the same name.", "de": "Symboltabelle in CX-Programmer exportieren und den CSV-/TSV-Inhalt hier einfügen. Name, Adresse und Datentyp werden automatisch erkannt; manuelle Einträge überschreiben importierte Symbole gleichen Namens." },
+      "label": "CX-Programmer symbol table (CSV/TSV)",
+      "help": "Export the symbol table in CX-Programmer and paste its CSV/TSV content here. Name, address and data type columns are detected automatically; manual entries override imported symbols with the same name.",
       "minRows": 6,
       "maxRows": 12,
       "newLine": true,
