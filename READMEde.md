@@ -25,6 +25,12 @@ Die Symboltabelle in CX-Programmer als CSV oder tabulatorgetrennten Text exporti
 
 ## Changelog
 
+### Unreleased
+
+- Verwundbare Abhängigkeiten und Lockdatei aktualisiert, um die 23 offenen Dependabot-Meldungen vom 03.11.2026 zu beheben.
+- Weitere Entwicklungsabhängigkeiten aktualisiert sowie Testbefehle und Mocha-Typdefinitionen korrigiert.
+- Verbleibende Befunde in Entwicklungswerkzeugen in [SECURITY.md](SECURITY.md) dokumentiert.
+
 ### 0.1.0
 
 - Kompatibilität mit Node.js 22/24, js-controller 6 und aktuellem adapter-core

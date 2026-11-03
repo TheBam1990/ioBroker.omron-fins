@@ -8,7 +8,8 @@
     "strict": true,
     "noImplicitAny": false,
     "module": "commonjs",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "types": ["node", "mocha"]
   },
   "include": ["main.js", "lib/**/*.js", "lib/**/*.d.ts", "test/**/*.js", "main.test.js"],
   "exclude": ["node_modules", "lib/tools.js", "admin"]

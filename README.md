@@ -30,6 +30,12 @@ Export the symbol table from CX-Programmer as CSV or tab-separated text and past
 
 ## Changelog
 
+### Unreleased
+
+- Updated vulnerable dependencies and the lockfile to resolve the 23 open Dependabot alerts from 2026-11-03.
+- Updated additional development dependencies and corrected test commands and Mocha type declarations.
+- Documented remaining development-tool advisories in [SECURITY.md](SECURITY.md).
+
 ### 0.1.0
 
 - Updated for Node.js 22/24, js-controller 6 and current adapter-core
